@@ -141,7 +141,7 @@ li > a:hover::after {
 .text-box1 > h1{
     font-size: 62px;
     margin: 20px 0px 10px;
-    -webkit-text-stroke: 1.5px rgb(18, 113, 31);
+    
 
 }
 .text-box1 > h3 {
