@@ -1,0 +1,89 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<!-- Image of me on top of the header section-->
+<nav class="sticky">
+    <ul>
+        <li><a href="#About">ABOUT</a></li> <!-- Links to About section -->
+        <li><a href="#Portfolio">PORTFOLIO</a></li> <!-- Links to portfolio section -->
+        <li><a href="#Contact">CONTACTS</a></li> <!-- Links to contact section -->
+    </ul>
+</nav>
+
+<!-- My about section -->
+ <div id="About" class="About">
+     <h1>WHO IS GEORGE TACKIE?</h1>
+     <div class="text-box2">
+         <p>@Model.Description1</p> <!-- calls model's description1 property -->
+         <p>@Model.Description2</p> <!-- calls model's description2 property -->
+         <p style="text-align: center; text-indent: 0em;">C:\Users\George\Resume> <a class="btn2" href="https://drive.google.com/file/d/13UXrrW5tpSNPBFU6K71qZ8UrqJPwROp2/view?usp=sharing" target="_blank">View</a></p> <!-- button to use to view resume page -->
+     </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+</div>
+
+<!-- My portfolio seciton -->
+<div id="Portfolio" class="Portfolio">
+    <h1>PORTFOLIO</h1>
+    <!-- made rows and column for each project to fit in container -->
+    <div class="row"> 
+        <div class="Portfolio-col">
+            <img src="~/images/proj1.png" /> <!-- using the image in the scaled images folder -->
+            <div class="text-box3">
+                <p>C:\Users\George\Projects> <br /> @Model.SDA()</p> <!-- using linq method to call project --> 
+                <p>C:\Users\George\Git> <a href="https://github.com/Seagun89/Team19SKiaR12" class="btn3" target="_blank">View</a></p> <!-- button to use to view git page -->
+            </div>   
+        </div> 
+    </div>
+    <hr /> <!-- for media -->
+    <div class="row">
+        <div class="Portfolio-col">
+            <img src="~/images/proj2.png" /> <!-- using the image in the scaled images folder -->
+            <div class="text-box3">
+                <p>C:\Users\George\Projects> <br /> @Model.IBB()</p> <!-- using linq method to call project --> 
+                <p>C:\Users\George\Git> <a href="https://github.com/Seagun89/Itiner-Buddy-Bot" class="btn3" target="_blank">View</a></p> <!-- button to use to view git page -->
+            </div>   
+        </div> 
+    </div>
+    <hr /> <!-- for media -->
+    <div class="row">
+        <div class="Portfolio-col">
+            <img src="~/images/proj4.png" /> <!-- using the image in the scaled images folder -->
+            <div class="text-box3">
+                <p>C:\Users\George\Projects> <br /> @Model.SCHI()</p> <!-- using linq method to call project -->
+                <p>C:\Users\George\Git> <a href="https://github.com/Seagun89/Software-comp-build" class="btn3" target="_blank">View</a></p> <!-- button to use to view git page -->
+            </div>   
+        </div> 
+    </div>
+    <hr /> <!-- for media -->
+    <div class="row">
+        <div class="Portfolio-col">
+            <img src="~/images/proj3.png" /> <!-- using the image in the scaled images folder -->
+            <div class="text-box3">
+                <p>C:\Users\George\Projects> <br /> @Model.TTT()</p> <!-- using linq method to call project -->
+                <p>C:\Users\George\Git> <a href="https://github.com/Seagun89/tic-tac-toe-project" class="btn3" target="_blank">View</a></p> <!-- button to use to view git page -->
+            </div>   
+        </div> 
+    </div>
+</div>
+
+<!-- My contacts section-->
+<div id="Contact" class="Contact">
+    <h1>IF YOU WANT TO REACH ME</h1>
+     <div class="text-box4">
+         <p>C:\Users\George\Email> @Model.Email</p> <!-- calls model's email property -->
+         <p>C:\Users\George\Phone> @Model.PhoneNumber</p> <!-- calls model's phone property -->
+         <p>C:\Users\George\LinkedIn> <a href="https://www.linkedin.com/in/george-tackie-a4bb4419b/" class="btn4" target="_blank">View</a></p> <!-- button to use to view linkedin page -->
+     </div>
+</div>

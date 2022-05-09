@@ -1,0 +1,468 @@
+﻿html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+/* This is used to separate the projects from each other on mobile */
+@media(max-width: 700px)
+{
+    hr {
+        position: relative;
+        margin-bottom: 10px;
+        border: none;
+        height: 0px;
+        border-top: 3px solid rgb(22, 177, 21);
+    }
+}
+    
+/* Header layout*/
+header {
+    background-image: linear-gradient(rgba(4, 9, 30, 0.6), rgba(4, 9, 30, 0.6)), url(/images/matrix.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+
+}
+@media (max-width: 700px)
+{
+    header{
+        overflow: hidden;
+        max-width: 700px;
+        min-width: 400px;
+    }
+}
+
+/* My profile image overlay */
+.profile-img {
+    position: absolute;
+    -moz-box-shadow: 10px 10px 5px rgb(128, 128, 128, 0.2);
+    -webkit-box-shadow: 10px 10px 5px rgb(128, 128, 128, 0.2);
+    box-shadow: 10px 10px 5px rgb(128, 128, 128, 0.2);
+    -moz-border-radius: 20%;
+    -webkit-border-radius: 20%;
+    border-radius: 20%;
+    border: 2px groove black;
+    height: 40%;
+    top: 20%;
+    left: 40%;
+}
+
+@media all and (max-width: 800px)
+{
+    .profile-img{
+        left: 20%;
+        margin-right: auto;
+    }
+}
+
+/* making navbar and allowing sticky */
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0%;
+    background-color: black;
+}
+@media (max-width: 700px) {
+    .sticky{
+        justify-content: center;
+        margin-bottom: 0px;
+        
+    }
+}
+ul {
+    list-style-type: none;
+    margin-bottom: 0px;
+    padding: 0 0 0 0 ;
+    overflow: hidden;
+}
+li {
+    float: left;
+}
+
+li > a {
+    display: block;
+    color: rgb(22, 177, 21) ;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: 'OCR A', monospace;
+}
+li > a:hover {
+    color: rgb(18, 113, 31) !important;
+}
+li > a::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: rgb(18, 113, 31);
+    display: block;
+    margin: auto;
+}
+
+li > a:hover::after {
+    background-color: rgb(18, 113, 31);
+    width: 100%;
+    transition: 0.5s;
+}
+
+/* text box under profile image on layout header */
+.text-box1 {
+    width: 90%;
+    color: rgb(22, 177, 21) !important;
+    position: absolute;
+    top: 70%;
+    left: 47%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: 'OCR A', monospace;
+}
+
+.text-box1 > h1{
+    font-size: 62px;
+    margin: 20px 0px 10px;
+    -webkit-text-stroke: 1.5px rgb(18, 113, 31);
+
+}
+.text-box1 > h3 {
+    -webkit-text-stroke: .5px rgb(18, 113, 31);
+}
+
+@media (max-width: 700px)
+{
+    .text-box1 > h1 {
+        font-size: 20px;
+        -webkit-text-stroke: .03px rgb(18, 113, 31);
+        margin-bottom 0px;
+    }
+}
+a.btn1 {
+    display: inline-block;
+    padding: 0.35em 1.2em;
+    border: 0.1em solid rgb(22, 177, 21);
+    margin: 20px 0.3em 0.3em 0;
+    border-radius: 0.12em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'OCR A', monospace;
+    font-weight: 300;
+    color: rgb(22, 177, 21) !important;
+    text-align: center;
+    transition: all 0.2s;
+}
+a.btn1:hover {
+    color: black !important;
+    background-color: rgb(22, 177, 21);
+}
+
+@media all and (max-width:30em) {
+     a.btn1 {
+        display: block;
+        margin: 0.4em auto;
+    }
+}
+
+/* Design for the about section */
+.About{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.About > h1 {
+    font-size: 36px;
+    font-weight: 400;
+    font-family: 'OCR A', monospace;
+    color: rgb(18, 113, 31) !important;
+    text-decoration-line: underline;
+    text-decoration-thickness: 4px;
+    text-decoration-style: solid;
+    text-decoration-color: rgb(18, 113, 31);
+}
+
+@media(max-width: 700px)
+{
+    .About > h1 {
+        font-size: 27px;
+        font-weight: 800;
+        padding-top: 10px;
+        margin: 1px;
+    }
+}
+.text-box2{
+    flex-basis: 50%;
+    margin: 10%;
+    background: black;
+    border-radius: 20px;
+    margin-bottom: 5%;
+    padding: 30px 4.7% 10px;
+    box-shadow: 0px 0px 50px 0px rgb(86, 84, 84);
+}
+
+@media(max-width: 700px) {
+    .text-box2 {
+        padding: 10px 5px;
+        margin-right: 1%;
+        margin-left: 1%;
+    }
+}
+.text-box2 > p {
+    font-size: 20px;
+    font-weight: 400;
+    font-family: 'OCR A';
+    color: rgb(22, 177, 21);
+    text-indent: 1em;
+    text-align: justify;
+}
+
+@media (max-width: 700px)
+{
+    .text-box2 > p {
+        font-size: 15px;
+        text-align:left;
+        text-indent: 0em;
+    }
+}
+
+a.btn2 {
+    display: inline-block;
+    padding: 0.1em 1.2em;
+    border: 0.1em solid rgb(22, 177, 21);
+    margin: 10px 0.3em 0.3em 0;
+    border-radius: 0.12em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'OCR A', monospace;
+    font-weight: 300;
+    color: rgb(22, 177, 21) !important;
+    text-align: center;
+    transition: all 0.2s;
+}
+
+a.btn2:hover {
+    color: black !important;
+    background-color: rgb(22, 177, 21);
+}
+
+@media all and (max-width:30em) {
+     a.btn2 {
+        display: block;
+        margin: 0.4em auto;
+    }
+}
+
+/* Design for the projects section */
+.Portfolio {
+    width: 80%;
+    margin: auto;
+    padding-top: 100px;
+}
+
+@media(max-width:700px){
+    .Portfolio{
+        padding-top: 40%;
+    }
+}
+.Portfolio > h1 {
+    font-size: 36px;
+    font-weight: 400;
+    font-family: 'OCR A', monospace;
+    text-align: center;
+    color: rgb(18, 113, 31) !important;
+    text-decoration-line: underline;
+    text-decoration-thickness: 4px;
+    text-decoration-style: solid;
+    text-decoration-color: rgb(18, 113, 31);
+}
+
+@media(max-width:700)
+{
+    .Portfolio > h1{
+        margin-top: 1%;
+    }
+}
+.Portfolio-col > img {
+    max-width: 100%;
+    border-radius: 70px;
+    margin-bottom: 4%;
+    margin-left: 23%;
+    border: 2px solid darkgreen;
+}
+
+@media(max-width: 700px)
+{
+    .Portfolio-col > img {
+        margin-left: 1%;
+    }
+}
+
+.row{
+    margin-top: 5%;
+    display: flex;
+    
+}
+.text-box3 {
+    flex-basis: 31%;
+    margin-right: 30%;
+    margin-left: 30%;
+    background: black;
+    border-radius: 20px;
+    margin-bottom: 10%;
+    padding: 5px 1px 0px 0px;
+    box-shadow: 0px 0px 50px 0px rgb(86, 84, 84);
+    text-align: center;
+}
+@media(max-width:700px){
+    .text-box3 {
+        padding: .3em  .1em .2em .3em;
+        margin-top: 10%;
+        margin-right: 1%;
+        margin-left: 1%;
+    }
+}
+.text-box3 > p {
+    font-family: 'OCR A', monospace;
+    color: rgb(22, 177, 21);
+    font-weight: 200;
+    line-height: 21px; 
+}
+a.btn3 {
+    display: inline-block;
+    padding: 0.1em 1.2em;
+    border: 0.1em solid rgb(22, 177, 21);
+    margin: 0 0.3em 1em 0;
+    border-radius: 0.12em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'OCR A', monospace;
+    font-weight: 300;
+    color: rgb(22, 177, 21) !important;
+    text-align: center;
+    transition: all 0.2s;
+}
+
+a.btn3:hover {
+    color: black !important;
+    background-color: rgb(22, 177, 21);
+}
+
+@media all and (max-width:30em) {
+     a.btn3 {
+        display: block;
+        margin: 0.2em auto;
+    }
+}
+
+/* Design for the contact section */
+.Contact {
+    width: 80%;
+    margin: auto;
+    padding-top: 100px;
+}
+
+@media(max-width:700px) {
+    .Contact {
+        padding-top: 40%;
+    }
+}
+
+.Contact > h1 {
+    font-size: 36px;
+    font-weight: 400;
+    font-family: 'OCR A', monospace;
+    text-align: center;
+    color: rgb(18, 113, 31) !important;
+    text-decoration-line: underline;
+    text-decoration-thickness: 4px;
+    text-decoration-style: solid;
+    text-decoration-color: rgb(18, 113, 31);
+}
+
+@media(max-width:700) {
+    .Contact > h1 {
+        margin-top: 10%;
+        font-size: 27px;
+        font-weight: 800;
+        padding-top: 10px;
+        
+    }
+}
+
+.text-box4 {
+    flex-basis: 50%;
+    margin: 10%;
+    background: black;
+    border-radius: 20px;
+    margin-bottom: 30%;
+    padding: 30px 4.7% 10px;
+    box-shadow: 0px 0px 50px 0px rgb(86, 84, 84);
+}
+
+@media(max-width: 700px) {
+    .text-box4 {
+        padding: 10px 5px;
+        margin-right: 1%;
+        margin-left: 1%;
+    }
+}
+
+.text-box4 > p {
+    font-size: 20px;
+    font-weight: 400;
+    font-family: 'OCR A';
+    color: rgb(22, 177, 21);
+    text-indent: 0em;
+    text-align: justify;
+}
+@media (max-width: 700px) {
+    .text-box4 > p {
+        font-size: 15px;
+        text-align: left;
+        text-indent: 0em;
+    }
+}
+a.btn4 {
+    display: inline-block;
+    padding: 0.1em 1.2em;
+    border: 0.1em solid rgb(22, 177, 21);
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 0.12em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'OCR A', monospace;
+    font-weight: 300;
+    color: rgb(22, 177, 21) !important;
+    text-align: center;
+    transition: all 0.2s;
+}
+
+    a.btn4:hover {
+        color: black !important;
+        background-color: rgb(22, 177, 21);
+    }
+
+@media all and (max-width:30em) {
+     a.btn4 {
+        display: block;
+        margin: 0.2em auto;
+    }
+}
