@@ -34,7 +34,7 @@ namespace UpdatedPortfolio.Pages
                 For front-end I feel comfortable working with HTML, CSS3, Bootstrap4. I do plan on learning either javascript
                 or python for more frontend duties. As for backend I like using C#, ASP.NET, Entity Framework and the MS MYSQL sever.";
             this.Email = "tackie.george89@gmail.com";
-            this.PhoneNumber = "1 (518) 466 - 9553";
+            this.PhoneNumber = "1 (845) 270 - 5941";
             this.Projects = new List<Project>() // each arguement is details of my previous projects
             {
                 new Project(
